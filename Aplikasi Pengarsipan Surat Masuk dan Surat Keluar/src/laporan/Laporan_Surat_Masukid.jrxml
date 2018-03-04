@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="53da3922-2d8a-47a8-a83f-5e221aaf2d83">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="95"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tbl_surat_masuk.`no_agenda` AS tbl_surat_masuk_no_agenda,
+     tbl_surat_masuk.`id` AS tbl_surat_masuk_id,
+     tbl_surat_masuk.`jenis_surat` AS tbl_surat_masuk_jenis_surat,
+     tbl_surat_masuk.`tanggal_terima` AS tbl_surat_masuk_tanggal_terima,
+     tbl_surat_masuk.`no_surat` AS tbl_surat_masuk_no_surat,
+     tbl_surat_masuk.`pengirim` AS tbl_surat_masuk_pengirim,
+     tbl_surat_masuk.`perihal` AS tbl_surat_masuk_perihal
+FROM
+     `tbl_surat_masuk` tbl_surat_masuk]]>
+	</queryString>
+	<field name="tbl_surat_masuk_no_agenda" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_id" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_jenis_surat" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_tanggal_terima" class="java.sql.Date"/>
+	<field name="tbl_surat_masuk_no_surat" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_pengirim" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_perihal" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="145" y="0" width="274" height="23" uuid="978bfe35-b578-49e9-b885-371a37665604"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[SMK NEGERI 2 KOTA BEKASI ]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="124" y="23" width="321" height="56" uuid="f301b12b-ee16-439e-9f5c-3b10209ef36a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[jln. Lap Rawa Butun. Kel. Ciketing Udik, Kel. Bantar Gebang]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="2" width="174" height="77" uuid="b416f056-e460-4ad3-bc94-975dd8c5d618"/>
+				<imageExpression><![CDATA["C:\\Users\\Tius\\Documents\\NetBeansProjects\\Aplikasi Pengarsipan Surat Masuk dan Surat Keluar\\src\\gambar\\logorpl.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="4" width="555" height="1" uuid="5b1933dd-73d5-463c-9760-a6811abe3572"/>
+			</line>
+			<textField>
+				<reportElement x="403" y="8" width="152" height="20" uuid="da4ac850-901e-45fe-ae40-adcf5759e452"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_tanggal_terima}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="359" y="8" width="44" height="20" uuid="1a415660-f67f-4123-baf3-07f52b2b8711"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Bekasi, ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="102" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="f69e8677-ee90-412d-85f1-a0bf7185c2ad"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Nomor :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="6fb003bb-e844-4094-ba69-cde9b04286fe"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Lampiran :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="41" width="100" height="20" uuid="e0b4d5e0-a11e-41ba-8873-cdc7b1bddd95"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Perihal :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="21" width="100" height="20" uuid="7339406f-b9e6-4848-a14b-87934e5bf801"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="61" width="100" height="20" uuid="bc13d1b7-cccc-4a19-a4b5-4ab96769c053"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Kepada :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="0" width="144" height="20" uuid="13f00dea-732d-4568-bcac-36a7d5c39988"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_no_surat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="41" width="100" height="20" uuid="52b33a19-0139-4317-98a9-5a4bbd7daa11"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_perihal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="81" width="187" height="20" uuid="baabdb9d-7be3-4489-b3e1-de1392292b71"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_pengirim}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="126" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="43983300-8001-4ae8-9b88-5ff707c3d38e"/>
+				<text><![CDATA[Dengan Hormat,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="20" width="432" height="29" uuid="78cac8a6-70e7-443e-9a20-4bbe6be1ca2d"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Dengan Surat Ini saya sampaikan kepada rekan rekan, bahwa akan ada penerimaan pegawai baru perusahaan kami]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="59" width="432" height="20" uuid="61480f15-c282-45b4-a53a-41b0f8e51ab1"/>
+				<text><![CDATA[maka persipakandiri rekan rekan demi kelancaran interview, yang akan dilaksanakan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="79" width="316" height="44" uuid="e5bb7a8b-263a-4212-bbe9-0f9229562106"/>
+				<text><![CDATA[Tanggal : 20 Februari 2018
+Pukul : 08.00 WIB - Selesai
+Tempat : Aula SMK Negeri 2 Kota Bekasi]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="71" y="12" width="432" height="33" uuid="8d586b07-c96e-48eb-aba4-7612dbae9e28"/>
+				<text><![CDATA[Demikian surat pemberitahuan yang kami sampaikan. atas perhatiannya kami ucapkan terima kasih]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="76" splitType="Stretch">
+			<staticText>
+				<reportElement x="403" y="0" width="100" height="20" uuid="bb78db6f-c875-49d0-85ce-f13ab0249126"/>
+				<text><![CDATA[Hubin SMKN 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="403" y="56" width="100" height="20" uuid="e2f6baf6-74a3-4ce9-9696-a79f34bfd3f5"/>
+				<text><![CDATA[REBO]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

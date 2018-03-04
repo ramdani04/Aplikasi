@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bff55849-df98-43eb-afab-d8284971f2cd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="78"/>
+	<parameter name="nosurat" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_surat_masuk.`no_agenda` AS tbl_surat_masuk_no_agenda,
+     tbl_surat_masuk.`id` AS tbl_surat_masuk_id,
+     tbl_surat_masuk.`jenis_surat` AS tbl_surat_masuk_jenis_surat,
+     tbl_surat_masuk.`tanggal_terima` AS tbl_surat_masuk_tanggal_terima,
+     tbl_surat_masuk.`no_surat` AS tbl_surat_masuk_no_surat,
+     tbl_surat_masuk.`pengirim` AS tbl_surat_masuk_pengirim,
+     tbl_surat_masuk.`perihal` AS tbl_surat_masuk_perihal
+FROM
+     `tbl_surat_masuk` tbl_surat_masuk where no_surat = $P{nosurat}]]>
+	</queryString>
+	<field name="tbl_surat_masuk_no_agenda" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_id" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_jenis_surat" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_tanggal_terima" class="java.sql.Date"/>
+	<field name="tbl_surat_masuk_no_surat" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_pengirim" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_perihal" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#FFFFFF" uuid="da88e62a-58ac-45c0-8a2b-3e7d45862123"/>
+				<staticText>
+					<reportElement x="102" y="8" width="394" height="72" forecolor="#000000" uuid="35ff8f64-d39e-4593-b316-7ca00ad16e14"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SMK NEGERI 2 KOTA BEKASI
+Jl-lap. Bola butun –Ciketing Udik –Bantargebang -Kota Bekasi 17153
+Telepon. 021 -82483479 Fax. 021 -82483479
+Website       :www.smkn2kotabekasi.sch.id
+e-mail        : info@smkn2kotabekasi.net
+2016/2017
+]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="32">
+			<staticText>
+				<reportElement x="408" y="12" width="40" height="20" uuid="82717732-0ef5-4a87-85ce-cec2020e6414"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Bekasi, ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="448" y="12" width="107" height="20" uuid="5dd42d2e-b264-4010-8899-e65eacd65074"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_tanggal_terima}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="137">
+			<line>
+				<reportElement x="-20" y="-31" width="595" height="1" forecolor="#666666" uuid="548389ce-34e4-4438-b57a-320f0db3a8fd"/>
+			</line>
+			<staticText>
+				<reportElement x="11" y="41" width="100" height="20" uuid="29c667dd-f51d-4133-813c-5b080a7e77a3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Perihal :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="0" width="100" height="20" uuid="80e0e33a-675c-476d-83d2-648c17d8dbda"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Nomor :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="21" width="100" height="20" uuid="1199ce04-b331-4ddd-9390-7790b2ac08f4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="61" width="100" height="20" uuid="d7abb7a6-296a-407d-a42b-624c0fcc02cb"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Kepada :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="111" y="0" width="144" height="20" uuid="6fa96045-ccc2-4022-ba71-42b7107b53b9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_no_surat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="41" width="100" height="20" uuid="2f8c715e-b982-4435-8739-64992a2442c7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_perihal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="20" width="100" height="20" uuid="0489b5c8-1af8-4f87-9b9d-bdd8bae25714"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Lampiran :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="81" width="100" height="32" uuid="9b24cd6a-653c-4531-aa10-2d86a3df5760"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Yth Rekan Rekan
+di tempat]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="305">
+			<staticText>
+				<reportElement x="81" y="69" width="432" height="20" uuid="45297c8a-e993-41db-a72a-5c478caaa699"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[maka persipakandiri rekan rekan demi kelancaran interview, yang akan dilaksanakan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="89" width="316" height="44" uuid="50a1dde1-aa0d-437a-9f28-2c40c95b621a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Tanggal : 20 Februari 2018
+Pukul : 08.00 WIB - Selesai
+Tempat : Aula SMK Negeri 2 Kota Bekasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="10" width="126" height="20" uuid="1e12c112-8a00-4032-9275-893d6e24526c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Dengan Hormat,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="30" width="432" height="39" uuid="250533d0-994c-4d41-a828-aec125cd1f4b"/>
+				<textElement textAlignment="Justified">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Dengan Surat Ini saya sampaikan kepada rekan rekan, bahwa akan ada penerimaan pegawai baru perusahaan kami]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="280" width="100" height="20" uuid="5cf1cd15-6194-4828-8ec0-163ab0d5b2a8"/>
+				<text><![CDATA[REBO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="221" width="100" height="20" uuid="ddd9213b-17d1-4e83-91df-d19c0961b38c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Hubin SMKN 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="157" width="432" height="33" uuid="1c5a9266-2ca1-4284-88c3-b3d8f459ea73"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Demikian surat pemberitahuan yang kami sampaikan. atas perhatiannya kami ucapkan terima kasih]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17"/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

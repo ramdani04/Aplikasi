@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6bce6e47-a14c-4958-aed9-cfd433ba04dc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tbl_surat_masuk.`no_agenda` AS tbl_surat_masuk_no_agenda,
+     tbl_surat_masuk.`id` AS tbl_surat_masuk_id,
+     tbl_surat_masuk.`jenis_surat` AS tbl_surat_masuk_jenis_surat,
+     tbl_surat_masuk.`tanggal_terima` AS tbl_surat_masuk_tanggal_terima,
+     tbl_surat_masuk.`no_surat` AS tbl_surat_masuk_no_surat,
+     tbl_surat_masuk.`pengirim` AS tbl_surat_masuk_pengirim,
+     tbl_surat_masuk.`perihal` AS tbl_surat_masuk_perihal
+FROM
+     `tbl_surat_masuk` tbl_surat_masuk]]>
+	</queryString>
+	<field name="tbl_surat_masuk_no_agenda" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_id" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_jenis_surat" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_tanggal_terima" class="java.sql.Date"/>
+	<field name="tbl_surat_masuk_no_surat" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_pengirim" class="java.lang.String"/>
+	<field name="tbl_surat_masuk_perihal" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#FFFFFF" uuid="6da035d3-d999-4d16-a6d6-7c682153d804"/>
+				<staticText>
+					<reportElement x="101" y="8" width="394" height="72" forecolor="#000000" uuid="8e87096a-ebd8-4238-9bf2-320cf12161c2"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[LAPORAN SURAT MASUK
+SMK NEGERI 2 KOTA BEKASI
+Jl-lap. Bola butun –Ciketing Udik –Bantargebang -Kota Bekasi 17153
+Telepon. 021 -82483479 Fax. 021 -82483479
+Website       :www.smkn2kotabekasi.sch.id
+e-mail        : info@smkn2kotabekasi.net]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="3">
+			<line>
+				<reportElement x="-20" y="-10" width="595" height="1" forecolor="#666666" uuid="35a8bacf-5714-4cad-85d4-97b5779a9ffd"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="216">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="2" y="210" width="555" height="1" uuid="18b32f67-7b83-4416-ae20-4915e93c357f"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="172" y="0" width="246" height="30" uuid="0d2e147b-8939-4cf5-b829-e17bea63ef1c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_no_agenda}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="172" y="30" width="246" height="30" uuid="16e797d8-138b-4ff5-8873-47e9ae8c2f5f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="172" y="60" width="246" height="30" uuid="e4aac533-71bd-43f1-b72b-c9018a9fc864"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_jenis_surat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="172" y="90" width="246" height="30" uuid="82e468a8-8d49-4ed9-91a6-8362077edc01"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_tanggal_terima}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="172" y="120" width="246" height="30" uuid="2ad711f7-36be-468d-931c-8b74b6329d54"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_no_surat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="172" y="150" width="246" height="30" uuid="ae0ce426-9723-45cc-8184-76aa6bf197fb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_pengirim}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="172" y="180" width="246" height="30" uuid="c1c4ec07-552d-4c1d-a154-f8930302c2fb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tbl_surat_masuk_perihal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="0" width="100" height="30" forecolor="#000000" backcolor="#FFFFFF" uuid="63dad352-2e15-4cf5-9f63-b05eaac79497"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Agenda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="30" width="100" height="30" forecolor="#000000" backcolor="#FFFFFF" uuid="f048ae64-10a0-4299-ba88-3c2bb61a9361"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Petugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="60" width="100" height="30" forecolor="#000000" backcolor="#FFFFFF" uuid="a5df9d49-f747-41ae-8bd5-89987805cd28"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis Surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="90" width="100" height="30" forecolor="#000000" backcolor="#FFFFFF" uuid="12d8e5f5-ff9e-4b7d-aa28-0a5cc231a973"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="120" width="100" height="30" forecolor="#000000" backcolor="#FFFFFF" uuid="e9a513cc-d777-4f4d-8c11-f2f2f47f03be"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="150" width="100" height="30" forecolor="#000000" backcolor="#FFFFFF" uuid="a9f057e6-a64d-4200-aa1e-783f8f07531b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pengirim]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="180" width="100" height="30" forecolor="#000000" backcolor="#FFFFFF" uuid="d5fa1d17-e838-41c2-b2fb-11bc9807ec87"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Perihal]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="883f6d6e-db18-44d7-8a14-7fa1341a5f80"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="5d56c93e-cf51-4d79-ab66-9aa85c99a04b"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="62c2730f-85de-4101-ad73-afbdc6eafb9a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
